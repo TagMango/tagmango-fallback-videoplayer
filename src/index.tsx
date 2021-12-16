@@ -8,10 +8,10 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/player'>
       <CookiesProvider>
         <Routes>
-          <Route path="/player" element={<App />} />
+          <Route path="/" element={<App />} />
         </Routes>
       </CookiesProvider>
     </BrowserRouter>
