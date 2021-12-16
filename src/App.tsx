@@ -80,6 +80,9 @@ const App: React.FC = () => {
       onPause={() => setPlaying(false)}
       style={{}}
       onReady={() => {}}
+      onFullscreenChange={(val = true) => {
+        // window.ReactNativeWebView.postMessage(`fullscreenchange - ${val}`);
+      }}
     />
   ) : null;
 };
