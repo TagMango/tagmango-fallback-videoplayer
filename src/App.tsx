@@ -4,6 +4,12 @@ import { useLocation } from "react-router-dom";
 import ReactPlayer from "react-player";
 import "./App.css";
 
+declare global {
+  interface Window {
+    ReactNativeWebView: any;
+  }
+}
+
 const App: React.FC = () => {
   const [playing, setPlaying] = React.useState(false);
   const player = React.useRef(null);
@@ -81,7 +87,7 @@ const App: React.FC = () => {
       style={{}}
       onReady={() => {}}
       onFullscreenChange={(val = true) => {
-        // window.ReactNativeWebView.postMessage(`fullscreenchange - ${val}`);
+        window.ReactNativeWebView.postMessage(`fullscreenchange - ${val}`);
       }}
     />
   ) : null;
