@@ -4,13 +4,15 @@ import "./index.css";
 import { CookiesProvider } from "react-cookie";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <CookiesProvider>
-        <App />
+        <Routes>
+          <Route path="/player" element={<App />} />
+        </Routes>
       </CookiesProvider>
     </BrowserRouter>
   </React.StrictMode>,

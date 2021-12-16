@@ -45,6 +45,7 @@ const App: React.FC = () => {
     const params = new URLSearchParams(location.search);
     const url = params.get("url");
     const accessToken = params.get("accessToken");
+    console.log(url, accessToken);
     if (url) {
       setMediaUrl(url);
     }
