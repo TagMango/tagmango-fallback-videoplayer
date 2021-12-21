@@ -39,6 +39,8 @@ const App: React.FC = () => {
 
   useEffect(() => {
     fetchCookie();
+    const interval = setInterval(() => fetchCookie(), 240000);
+    return () => clearInterval(interval);
   }, [token.current]);
 
   useEffect(() => {
